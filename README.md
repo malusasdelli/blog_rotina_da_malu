@@ -1,0 +1,1 @@
+# blog_rotina_da_malu
