@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário de uma Secundarista | Meu Blog</title>
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        header p {
+            margin-top: 0.5rem;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        /* Layout Principal */
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Postagens */
+        .post {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 1.5rem;
+        }
+
+        .post-date {
+            font-size: 0.85rem;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .post h2 {
+            color: #2575fc;
+            margin-top: 0.3rem;
+        }
+
+        .routine-time {
+            font-weight: bold;
+            color: #6a11cb;
+        }
+
+        /* Barra Lateral (Profile) */
+        .sidebar {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            height: fit-content;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            max-width: 150px;
+            display: block;
+            margin: 0 auto 1rem auto;
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #e9ecef;
+            color: #666;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Caderno & Café ✏️</h1>
+        <p>Sobrevivendo ao 2º ano do Ensino Médio, um dia de cada vez.</p>
+    </header>
+
+    <div class="container">
+        
+        <main>
+            <article class="post">
+                <span class="post-date">Terça-feira, 14 de Outubro</span>
+                <h2>Como é a minha rotina real no 2º ano? 📚</h2>
+                <p>Gente, todo mundo fala que o segundo ano do ensino médio é o "ano do meio", mas ninguém avisa o quanto ele é puxado! Entre simulado, trabalho em grupo e tentar ter vida social, minha rotina fica assim:</p>
+                
+                <ul>
+                    <li><span class="routine-time">06:00 - O Despertador:</span> Levanto (com o coração na mão), tomo meu café bem forte e me arrumo pra ir pra escola.</li>
+                    <li><span class="routine-time">07:15 às 12:30 - A Maratona:</span> Aulas do dia. Hoje teve Química e Matemática logo nos primeiros horários... socorro!</li>
+                    <li><span class="routine-time">13:30 - Almoço & Descanço:</span> Chego em casa, almoço e me dou 45 minutos de paz pra ver vídeos ou mexer no celular.</li>
+                    <li><span class="routine-time">15:00 às 18:00 - Foco nos Estudos:</span> Hora de fazer as tarefas de casa, revisar a matéria da semana e preparar os resumos pro próximo ENEM.</li>
+                    <li><span class="routine-time">19:00 - Desconectar:</span> Tento fazer um exercício ou só relaxar ouvindo música antes do jantar.</li>
+                </ul>
+
+                <p>E vocês? Como conseguem organizar o tempo de estudo sem surtar? Me contem nos comentários!</p>
+            </article>
+
+            <article class="post">
+                <span class="post-date">Domingo, 12 de Outubro</span>
+                <h2>Dica do dia: Métodos de estudo que funcionam! 💡</h2>
+                <p>Essa semana comecei a usar o <strong>Método Pomodoro</strong> (estudo 25 minutos e me dou 5 de pausa) e sério, mudou minha vida na hora de estudar História e Biologia. Recomendo super pra quem se distrai fácil com o celular!</p>
+            </article>
+        </main>
+
+        <aside class="sidebar">
+            <h3>Sobre a Autora</h3>
+            <p style="text-align: center;"><strong>Sofia, 16 anos</strong></p>
+            <p>Estudante do 2º ano do Ensino Médio, apaixonada por literatura, café gelado e tentando entender Física de um jeito simples.</p>
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 1rem 0;">
+            <h4>Meta do Ano 🎯</h4>
+            <p>Manter as notas acima de 8.0 e sobreviver sem perder o sono!</p>
+        </aside>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Trabalho Escolar de Webdesign | Feito para fins educativos</p>
+    </footer>
+
+</body>
+</html>
