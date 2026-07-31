@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -5,22 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diário de uma Secundarista | Meu Blog</title>
     <style>
-        /* Estilos Gerais */
+        /* Estilos Gerais - Modo Escuro */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #d7a9e9;
-            color: #333;
+            background-color: #121214; /* Fundo geral escuro */
+            color: #e1e1e6;            /* Texto principal claro */
         }
 
         /* Cabeçalho */
         header {
-            background: linear-gradient(135deg, #cb11ac, #720be7);
-            color: white;
+            background: linear-gradient(135deg, #820ad1, #4c0677); /* Roxo vibrante e escuro */
+            color: #ffffff;
             text-align: center;
             padding: 2.5rem 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         header h1 {
@@ -32,6 +34,7 @@
             margin-top: 0.5rem;
             opacity: 0.9;
             font-size: 1.1rem;
+            color: #e1d5e7;
         }
 
         /* Layout Principal */
@@ -44,39 +47,41 @@
             gap: 2rem;
         }
 
-        /* Postagens */
+        /* Postagens - Modo Escuro */
         .post {
-            background: white;
+            background: #202024; /* Fundo do card em cinza escuro */
             padding: 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
             margin-bottom: 1.5rem;
+            border: 1px solid #29292e;
         }
 
         .post-date {
             font-size: 0.85rem;
-            color: #777;
+            color: #a8a8b3;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         .post h2 {
-            color: #b20ae0;
+            color: #d771ff; /* Destaque em lilás claro para leitura confortável */
             margin-top: 0.3rem;
         }
 
         .routine-time {
             font-weight: bold;
-            color: #e60bf6;
+            color: #f082ff;
         }
 
         /* Barra Lateral (Profile) */
         .sidebar {
-            background: white;
+            background: #202024;
             padding: 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
             height: fit-content;
+            border: 1px solid #29292e;
         }
 
         .profile-img {
@@ -91,17 +96,22 @@
         .sidebar h3 {
             margin-top: 0;
             text-align: center;
-            color: #333;
+            color: #ffffff;
+        }
+
+        .sidebar h4 {
+            color: #d771ff;
         }
 
         /* Rodapé */
         footer {
             text-align: center;
             padding: 1.5rem;
-            background-color: #e9ecef;
-            color: #666;
+            background-color: #18181b;
+            color: #8d8d99;
             margin-top: 2rem;
             font-size: 0.9rem;
+            border-top: 1px solid #29292e;
         }
 
         /* Responsividade para telas menores */
@@ -115,7 +125,7 @@
 <body>
 
     <header>
-        <h1>Caderno & Sobrevivencia ✏️💀</h1>
+        <h1>Caderno & Sobrevivência ✏️💀</h1>
         <p>Sobrevivendo ao 2º ano do Ensino Médio, um dia de cada vez.</p>
     </header>
 
@@ -130,7 +140,7 @@
                 <ul>
                     <li><span class="routine-time">06:00 - O Despertador:</span> Levanto (com o coração na mão), tomo meu café bem forte e me arrumo pra ir pra escola.</li>
                     <li><span class="routine-time">07:15 às 12:30 - A Maratona:</span> Aulas do dia. Hoje teve Química e Matemática logo nos primeiros horários... socorro!</li>
-                    <li><span class="routine-time">13:30 - Almoço & Descanço:</span> Chego em casa, almoço e me dou 45 minutos de paz pra ver vídeos ou mexer no celular.</li>
+                    <li><span class="routine-time">13:30 - Almoço & Descanso:</span> Chego em casa, almoço e me dou 45 minutos de paz pra ver vídeos ou mexer no celular.</li>
                     <li><span class="routine-time">15:00 às 18:00 - Foco nos Estudos:</span> Hora de fazer as tarefas de casa, revisar a matéria da semana e preparar os resumos pro próximo ENEM.</li>
                     <li><span class="routine-time">19:00 - Desconectar:</span> Tento fazer um exercício ou só relaxar ouvindo música antes do jantar.</li>
                 </ul>
@@ -146,10 +156,11 @@
         </main>
 
         <aside class="sidebar">
+            <img src="https://via.placeholder.com/150" alt="Foto de perfil de Maria Luiza" class="profile-img">
             <h3>Sobre a Autora</h3>
             <p style="text-align: center;"><strong>Maria Luiza, 16 anos</strong></p>
-            <p>Estudante do 2º ano do Ensino Médio, apaixonada por animais, vida católica e minha familia, amo passar o tempo com as pessoas que amo, tambem estou buscando entender Front-end de um jeito simples.</p>
-            <hr style="border: 0; border-top: 1px solid #eee; margin: 1rem 0;">
+            <p>Estudante do 2º ano do Ensino Médio, apaixonada por animais, vida católica e minha família. Amo passar o tempo com as pessoas que amo, também estou buscando entender Front-end de um jeito simples.</p>
+            <hr style="border: 0; border-top: 1px solid #323238; margin: 1rem 0;">
             <h4>Meta do Ano 🎯</h4>
             <p>Manter as notas acima de 8.0 e sobreviver sem perder o sono!</p>
         </aside>
@@ -157,7 +168,7 @@
     </div>
 
     <footer>
-        <p>&copy; Tabalho feito por Maria Luiza Sasdelli</p>
+        <p>&copy; Trabalho feito por Maria Luiza Sasdelli</p>
     </footer>
 
 </body>
