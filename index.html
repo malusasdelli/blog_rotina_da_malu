@@ -6,44 +6,44 @@
     <title>Diário de uma Secundarista | Meu Blog</title>
     <style>
         /* ==========================================
-           1. VARIÁVEIS DE CORES (PALETA HARMONIOSA)
+           1. VARIÁVEIS DE CORES
            ========================================== */
         :root {
-            /* Modo Claro (Lilás Pastel) */
-            --bg-body: #f3e8ff;
+            /* Modo Claro (Paleta e Gradiente Originais) */
+            --bg-body: #d7a9e9;
             --bg-card: #ffffff;
-            --bg-header: linear-gradient(135deg, #a855f7, #7e22ce);
-            --bg-footer: #eae5f2;
-            --text-primary: #3b0764;
-            --text-body: #4a5568;
-            --text-secondary: #8b5cf6;
+            --bg-header: linear-gradient(135deg, #cb11ac, #720be7); /* Gradiente degradê original */
+            --bg-footer: #e9ecef;
+            --text-primary: #333333;
+            --text-body: #333333;
+            --text-secondary: #777777;
             --header-title-color: #ffffff;
-            --title-color: #9333ea;
-            --time-color: #c026d3;
-            --border-color: #f3e8ff;
-            --shadow: 0 10px 25px -5px rgba(147, 51, 234, 0.1);
-            --btn-bg: rgba(255, 255, 255, 0.8);
-            --btn-text: #6b21a8;
-            --btn-border: #d8b4fe;
+            --title-color: #b20ae0;
+            --time-color: #e60bf6;
+            --border-color: #eeeeee;
+            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            --btn-bg: rgba(255, 255, 255, 0.85);
+            --btn-text: #720be7;
+            --btn-border: #cb11ac;
         }
 
-        /* Modo Escuro Harmonioso */
+        /* Modo Escuro */
         body.dark-mode {
-            --bg-body: #0f0e17;        /* Fundo bem escuro com toque de violeta */
-            --bg-card: #1a1829;        /* Card tom azul/roxo noturno */
-            --bg-header: linear-gradient(135deg, #a855f7, #c084fc); /* Gradiente claro para destacar texto preto */
+            --bg-body: #0f0e17;        
+            --bg-card: #1a1829;        
+            --bg-header: linear-gradient(135deg, #820ad1, #4c0677); /* Gradiente roxo escuro */
             --bg-footer: #12101d;
             --text-primary: #f3e8ff;    
             --text-body: #cbd5e1;       
             --text-secondary: #c084fc;  
-            --header-title-color: #000000; /* Título do cabeçalho PRETO no modo escuro */
-            --title-color: #000000;        /* Títulos dos posts PRETO no modo escuro */
+            --header-title-color: #ffffff; 
+            --title-color: #000000;        /* Título dos posts em PRETO no modo escuro */
             --time-color: #f472b6;      
             --border-color: #2e2a4a;
             --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
-            --btn-bg: rgba(26, 24, 41, 0.8);
+            --btn-bg: rgba(26, 24, 41, 0.85);
             --btn-text: #e9d5ff;
-            --btn-border: #06000f;
+            --btn-border: #820ad1;
         }
 
         /* Estilos Gerais */
@@ -65,7 +65,7 @@
             background: var(--btn-bg);
             backdrop-filter: blur(8px);
             color: var(--btn-text);
-            border: 1px solid var(--btn-border);
+            border: 2px solid var(--btn-border);
             padding: 10px 18px;
             border-radius: 30px;
             cursor: pointer;
@@ -81,12 +81,13 @@
 
         .theme-toggle-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 20px -5px rgba(147, 51, 234, 0.3);
+            box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.2);
         }
 
         /* Cabeçalho */
         header {
             background: var(--bg-header);
+            color: var(--header-title-color);
             text-align: center;
             padding: 3rem 1rem 2.5rem 1rem;
             transition: background 0.4s ease;
@@ -97,16 +98,13 @@
             margin: 0;
             font-size: 2.3rem;
             letter-spacing: -0.5px;
-            color: var(--header-title-color);
-            transition: color 0.4s ease;
         }
 
         header p {
             margin-top: 0.5rem;
             opacity: 0.9;
             font-size: 1.05rem;
-            font-weight: 400;
-            color: var(--header-title-color);
+            font-weight: 300;
         }
 
         /* Layout Principal */
@@ -241,55 +239,4 @@
                 
                 <ul>
                     <li><span class="routine-time">06:00 - O Despertador:</span> Levanto (com o coração na mão), tomo meu café bem forte e me arrumo pra ir pra escola.</li>
-                    <li><span class="routine-time">07:15 às 12:30 - A Maratona:</span> Aulas do dia. Hoje teve Química e Matemática logo nos primeiros horários... socorro!</li>
-                    <li><span class="routine-time">13:30 - Almoço & Descanso:</span> Chego em casa, almoço e me dou 45 minutos de paz pra ver vídeos ou mexer no celular.</li>
-                    <li><span class="routine-time">15:00 às 18:00 - Foco nos Estudos:</span> Hora de fazer as tarefas de casa, revisar a matéria da semana e preparar os resumos pro próximo ENEM.</li>
-                    <li><span class="routine-time">19:00 - Desconectar:</span> Tento fazer um exercício ou só relaxar ouvindo música antes do jantar.</li>
-                </ul>
-
-                <p>E vocês? Como conseguem organizar o tempo de estudo sem surtar? Me contem nos comentários!</p>
-            </article>
-
-            <article class="post">
-                <span class="post-date">Domingo, 12 de Outubro</span>
-                <h2>Dica do dia: Métodos de estudo que funcionam! 💡</h2>
-                <p>Essa semana comecei a usar o <strong>Método Pomodoro</strong> (estudo 25 minutos e me dou 5 de pausa) e sério, mudou minha vida na hora de estudar História e Biologia. Recomendo super pra quem se distrai fácil com o celular!</p>
-            </article>
-        </main>
-
-        <aside class="sidebar">
-            <img src="https://via.placeholder.com/150" alt="Foto de perfil de Maria Luiza" class="profile-img">
-            <h3>Sobre a Autora</h3>
-            <p style="text-align: center;"><strong style="color: var(--text-primary);">Maria Luiza, 16 anos</strong></p>
-            <p>Estudante do 2º ano do Ensino Médio, apaixonada por animais, vida católica e minha família. Amo passar o tempo com as pessoas que amo, também estou buscando entender Front-end de um jeito simples.</p>
-            <hr>
-            <h4>Meta do Ano 🎯</h4>
-            <p>Manter as notas acima de 8.0 e sobreviver sem perder o sono!</p>
-        </aside>
-
-    </div>
-
-    <footer>
-        <p>&copy; Trabalho feito por Maria Luiza Sasdelli</p>
-    </footer>
-
-    <script>
-        const themeToggleBtn = document.getElementById('themeToggle');
-        const themeIcon = document.getElementById('themeIcon');
-        const themeText = document.getElementById('themeText');
-
-        themeToggleBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-
-            if (document.body.classList.contains('dark-mode')) {
-                themeIcon.textContent = '☀️';
-                themeText.textContent = 'Modo Claro';
-            } else {
-                themeIcon.textContent = '🌙';
-                themeText.textContent = 'Modo Escuro';
-            }
-        });
-    </script>
-
-</body>
-</html>
+                    <li><span class="routine-time">07:15 às 12
