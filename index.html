@@ -6,39 +6,42 @@
     <title>Diário de uma Secundarista | Meu Blog</title>
     <style>
         /* ==========================================
-           1. MODO CLARO (Padrão)
+           1. VARIÁVEIS DE CORES (PALETA HARMONIOSA)
            ========================================== */
         :root {
-            --bg-body: #d7a9e9;
+            /* Modo Claro (Lilás Pastel) */
+            --bg-body: #f3e8ff;
             --bg-card: #ffffff;
-            --bg-header: linear-gradient(135deg, #cb11ac, #720be7);
-            --bg-footer: #e9ecef;
-            --text-primary: #333333;
-            --text-secondary: #777777;
-            --text-header: #ffffff;
-            --text-footer: #666666;
-            --title-color: #b20ae0;
-            --time-color: #e60bf6;
-            --border-color: #eeeeee;
-            --shadow: rgba(0, 0, 0, 0.05);
+            --bg-header: linear-gradient(135deg, #a855f7, #7e22ce);
+            --bg-footer: #eae5f2;
+            --text-primary: #3b0764;
+            --text-body: #4a5568;
+            --text-secondary: #8b5cf6;
+            --title-color: #9333ea;
+            --time-color: #c026d3;
+            --border-color: #f3e8ff;
+            --shadow: 0 10px 25px -5px rgba(147, 51, 234, 0.1);
+            --btn-bg: rgba(255, 255, 255, 0.8);
+            --btn-text: #6b21a8;
+            --btn-border: #d8b4fe;
         }
 
-        /* ==========================================
-           2. MODO ESCURO
-           ========================================== */
+        /* Modo Escuro Harmonioso (Deep Violet & Lavender) */
         body.dark-mode {
-            --bg-body: #121214;
-            --bg-card: #202024;
-            --bg-header: linear-gradient(135deg, #820ad1, #4c0677);
-            --bg-footer: #18181b;
-            --text-primary: #e1e1e6;
-            --text-secondary: #a8a8b3;
-            --text-header: #ffffff;
-            --text-footer: #8d8d99;
-            --title-color: #d771ff;
-            --time-color: #f082ff;
-            --border-color: #323238;
-            --shadow: rgba(0, 0, 0, 0.3);
+            --bg-body: #0f0e17;        /* Fundo bem escuro com toque de violeta */
+            --bg-card: #1a1829;        /* Card tom azul/roxo noturno */
+            --bg-header: linear-gradient(135deg, #6b21a8, #3b0764);
+            --bg-footer: #12101d;
+            --text-primary: #f3e8ff;    /* Branco/lilás bem suave */
+            --text-body: #cbd5e1;       /* Cinza levemente azulado para leitura relaxante */
+            --text-secondary: #c084fc;  /* Lilás claro vibrante */
+            --title-color: #e9d5ff;     /* Tom pastel iluminado */
+            --time-color: #f472b6;      /* Rosa neon suave para horários */
+            --border-color: #2e2a4a;
+            --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+            --btn-bg: rgba(26, 24, 41, 0.8);
+            --btn-text: #e9d5ff;
+            --btn-border: #4c1d95;
         }
 
         /* Estilos Gerais */
@@ -48,50 +51,58 @@
             margin: 0;
             padding: 0;
             background-color: var(--bg-body);
-            color: var(--text-primary);
-            transition: background-color 0.3s, color 0.3s;
+            color: var(--text-body);
+            transition: background-color 0.4s ease, color 0.4s ease;
         }
 
-        /* Botão de Alternar Tema */
+        /* Botão de Alternar Tema (Estilo Vidro/Moderno) */
         .theme-toggle-btn {
             position: fixed;
-            top: 15px;
-            right: 15px;
-            background-color: var(--bg-card);
-            color: var(--text-primary);
-            border: 2px solid var(--title-color);
-            padding: 8px 15px;
-            border-radius: 20px;
+            top: 20px;
+            right: 20px;
+            background: var(--btn-bg);
+            backdrop-filter: blur(8px);
+            color: var(--btn-text);
+            border: 1px solid var(--btn-border);
+            padding: 10px 18px;
+            border-radius: 30px;
             cursor: pointer;
-            font-weight: bold;
-            font-size: 0.9rem;
-            box-shadow: 0 2px 10px var(--shadow);
+            font-weight: 600;
+            font-size: 0.88rem;
+            box-shadow: var(--shadow);
             transition: all 0.3s ease;
             z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .theme-toggle-btn:hover {
-            transform: scale(1.05);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 20px -5px rgba(147, 51, 234, 0.3);
         }
 
         /* Cabeçalho */
         header {
             background: var(--bg-header);
-            color: var(--text-header);
+            color: #ffffff;
             text-align: center;
-            padding: 2.5rem 1rem;
-            transition: background 0.3s;
+            padding: 3rem 1rem 2.5rem 1rem;
+            transition: background 0.4s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.2rem;
+            font-size: 2.3rem;
+            letter-spacing: -0.5px;
         }
 
         header p {
             margin-top: 0.5rem;
             opacity: 0.9;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
+            font-weight: 300;
         }
 
         /* Layout Principal */
@@ -107,23 +118,30 @@
         /* Postagens */
         .post {
             background: var(--bg-card);
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px var(--shadow);
+            padding: 1.8rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
             margin-bottom: 1.5rem;
-            transition: background-color 0.3s;
+            border: 1px solid var(--border-color);
+            transition: all 0.4s ease;
+        }
+
+        .post:hover {
+            transform: translateY(-3px);
         }
 
         .post-date {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-secondary);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.2px;
+            font-weight: 600;
         }
 
         .post h2 {
             color: var(--title-color);
-            margin-top: 0.3rem;
+            margin-top: 0.4rem;
+            font-size: 1.4rem;
         }
 
         .routine-time {
@@ -131,23 +149,33 @@
             color: var(--time-color);
         }
 
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
         /* Barra Lateral (Profile) */
         .sidebar {
             background: var(--bg-card);
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px var(--shadow);
+            padding: 1.8rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
             height: fit-content;
-            transition: background-color 0.3s;
+            border: 1px solid var(--border-color);
+            transition: all 0.4s ease;
         }
 
         .profile-img {
             width: 100%;
             height: auto;
             border-radius: 50%;
-            max-width: 150px;
+            max-width: 130px;
             display: block;
-            margin: 0 auto 1rem auto;
+            margin: 0 auto 1.2rem auto;
+            border: 3px solid var(--title-color);
         }
 
         .sidebar h3 {
@@ -158,23 +186,24 @@
 
         .sidebar h4 {
             color: var(--title-color);
+            margin-bottom: 0.5rem;
         }
 
         .sidebar hr {
             border: 0;
             border-top: 1px solid var(--border-color);
-            margin: 1rem 0;
+            margin: 1.2rem 0;
         }
 
         /* Rodapé */
         footer {
             text-align: center;
-            padding: 1.5rem;
+            padding: 2rem 1rem;
             background-color: var(--bg-footer);
-            color: var(--text-footer);
-            margin-top: 2rem;
-            font-size: 0.9rem;
-            transition: background-color 0.3s, color 0.3s;
+            color: var(--text-body);
+            margin-top: 3rem;
+            font-size: 0.88rem;
+            transition: background-color 0.4s ease;
         }
 
         /* Responsividade */
@@ -187,7 +216,9 @@
 </head>
 <body>
 
-    <button id="themeToggle" class="theme-toggle-btn">🌙 Modo Escuro</button>
+    <button id="themeToggle" class="theme-toggle-btn">
+        <span id="themeIcon">🌙</span> <span id="themeText">Modo Escuro</span>
+    </button>
 
     <header>
         <h1>Caderno & Sobrevivência ✏️💀</h1>
@@ -223,7 +254,7 @@
         <aside class="sidebar">
             <img src="https://via.placeholder.com/150" alt="Foto de perfil de Maria Luiza" class="profile-img">
             <h3>Sobre a Autora</h3>
-            <p style="text-align: center;"><strong>Maria Luiza, 16 anos</strong></p>
+            <p style="text-align: center;"><strong style="color: var(--text-primary);">Maria Luiza, 16 anos</strong></p>
             <p>Estudante do 2º ano do Ensino Médio, apaixonada por animais, vida católica e minha família. Amo passar o tempo com as pessoas que amo, também estou buscando entender Front-end de um jeito simples.</p>
             <hr>
             <h4>Meta do Ano 🎯</h4>
@@ -238,16 +269,18 @@
 
     <script>
         const themeToggleBtn = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const themeText = document.getElementById('themeText');
 
         themeToggleBtn.addEventListener('click', () => {
-            // Alterna a classe dark-mode no body
             document.body.classList.toggle('dark-mode');
 
-            // Atualiza o texto do botão de acordo com o modo atual
             if (document.body.classList.contains('dark-mode')) {
-                themeToggleBtn.textContent = '☀️ Modo Claro';
+                themeIcon.textContent = '☀️';
+                themeText.textContent = 'Modo Claro';
             } else {
-                themeToggleBtn.textContent = '🌙 Modo Escuro';
+                themeIcon.textContent = '🌙';
+                themeText.textContent = 'Modo Escuro';
             }
         });
     </script>
